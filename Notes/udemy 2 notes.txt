@@ -1,0 +1,434 @@
+components:
+
+breadcrumbs- site organising
+pagination- end of pages
+alert and statusbars - alerts 
+statistics - numbers of product
+gallery - collection of pictures
+feature box - bunch of info in a box
+preview/profile cards - datapoints to preview(order)
+accordion - hiding info until user clicks(FAQ)
+tabs - tab indicator
+carousel - multiple content button(slides/slider)
+customer testimonials - feeback of customer(tweets)
+customer logos - marketing/collaborators/customers
+featured-in logos - awards/featured/article proofs
+steps - getting started with product
+forms - to give info/login/signup
+tables - tabular data presentation
+pricing tables - each column for pricing plan/subscription
+modal windows - functional modal windows
+(email login/signup/marketing popup windows)
+
+
+Accordion component:
+<html>
+  <style>
+  *{
+    margin: 0;
+    padding :0;
+    box-sizing: box-border;
+    }
+    .item{
+      box-shadow: 0 0 32px rgb(0,0,0,0.1);
+      padding: 10px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      column-gap: 24px;
+      row-gap: 32px;
+      align-items: center;
+
+    }
+    .number, .title{
+font-size: 24px;
+/* color : green; */
+    }
+    .number{
+        color: grey;
+    }
+    .icon{
+width: 24px;
+color : black;
+
+    }
+    .open{
+        border-top: 4px solid green;
+    }
+    .open .hidden-box{
+        display: block;
+    }
+    .open .number, .open .title{
+      color: green;
+    }
+    .hidden-box{
+        grid-column: 2;
+        display: none;
+    }
+    .hidden-box p {
+        margin-bottom:20px;
+    }
+    .hidden-box ul {
+        color :grey;
+        margin-left : 40px
+    }
+    .hidden-box li{
+        margin-bottom: 10px;
+    }
+    .accordion{
+      width: 700px;
+      margin: 100px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+  </style>
+  <body>
+    <div class= "accordion">
+        <div class="item">
+        <p class="number">01</p>
+         <p class="title">where are these chairs assembled ?</p>
+  <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+  </svg>
+        <div class="hidden-box">
+             <p>
+         Lorem ipsum is placeholder text commonly used in the graphic,</br>
+         print, and publishing industries for previewing layouts and visual mockups.
+          </p>
+          <p>
+            <ul>
+              <li>hi</li>
+               <li>this</li>
+               <li>is</li>
+               <li>website</li>
+          </ul>
+          </p>
+        </div>
+      </div>
+      <div class="item open">
+      <p class="number">02</p>
+       <p class="title">How long can i return my chair</p>
+<svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+</svg>
+      <div class="hidden-box">
+           <p>
+       Lorem ipsum is placeholder text commonly used in the graphic,</br>
+       print, and publishing industries for previewing layouts and visual mockups.
+        </p>
+        <p>
+          <ul>
+            <li>hi</li>
+             <li>this</li>
+             <li>is</li>
+             <li>website</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+        <div class="item">
+        <p class="number">03</p>
+         <p class="title">Do you ship countries outside EU</p>
+  <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+  </svg>
+        <div class="hidden-box">
+             <p>
+         Lorem ipsum is placeholder text commonly used in the graphic,</br>
+         print, and publishing industries for previewing layouts and visual mockups.
+          </p>
+          <p>
+            <ul>
+              <li>hi</li>
+               <li>this</li>
+               <li>is</li>
+               <li>website</li>
+          </ul>
+          </p>
+        </div>
+      </div>
+      </div>
+  </body>
+</html>
+
+note :
+to set in center
+margin: 100px auto;
+carousel component: section 6
+
+Table component:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table component</title>
+</head>
+<style>
+     *{
+      margin: 0;
+      padding :0;
+      box-sizing: box-border;
+      }
+      body{
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+      }
+      table{
+        width: 900px;
+        /* border: 1px solid black; */
+        border-collapse: collapse;
+      }
+      th,td{
+        /* border: 1px solid grey; */
+        padding: 24px 24px;
+        text-align: left;
+      }
+      thead th{
+        background-color: green;
+        color: white;
+      }
+      tbody tr:nth-child(odd){
+        background-color: lightgrey;
+      }
+      tbody tr:nth-child(even){
+        background-color: aquamarine;
+      }
+</style>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>chair</th>
+                <th>The Laid Back</th>
+                <th>The Worker Bee</th>
+                <th>The chair 4/2</th>
+            </tr>
+        </thead>
+<tbody>
+        <tr>
+            <th>width</th>
+            <td>80cm</td>
+            <td>60cm</td>
+            <td>220cm</td>
+        </tr>
+        <tr>
+            <th>height</th>
+            <td>100cm</td>
+            <td>110cm</td>
+            <td>90cm</td>
+        </tr>
+        <tr>
+            <th>Depth</th>
+            <td>70cm</td>
+            <td>65cm</td>
+            <td>80cm</td>
+        </tr>
+        <tr>
+            <th>Weight</th>
+            <td>16kg</td>
+            <td>22kg</td>
+            <td>80kg</td>
+        </tr>
+    </tbody>
+    </table>
+    
+</body>
+</html>
+
+pagination component:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagination component</title>
+</head>
+<style>
+     *{
+      margin: 0;
+      padding :0;
+      box-sizing: box-border;
+      }
+      body{
+        display: flex;
+        justify-content: center;
+      }
+      .pagination{
+        display: flex;
+        justify-content: center;
+        margin-top: 200px;
+        gap:30px;
+      }
+      button{
+        width:32px;
+        height: 32px;
+        border-radius: 50%;
+        background: none;
+        cursor: pointer;
+        border: 1px solid green;
+      }
+      .btn-icon{
+        /* width:32px;
+        height: 32px; */
+        stroke: green;
+        border-radius: 50%;
+      }
+     button:hover .btn-icon{
+        background-color: green;
+    stroke: white;
+     }
+      button :hover{
+        background-color: green;
+      }
+   .dots{
+font-size: 18px;
+   }
+   .page-link:link, .page-link:visited{
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+color: black;
+border-radius: 50%;
+width: 32px;
+height: 32px;;
+   }
+
+   /* specificity increases by putting a dot */
+   .page-link:hover, .page-link:active, .page-link.page-link--current{
+    background-color: green;
+    color: white;
+}
+</style>
+<body>
+    <div class="pagination">
+    <button>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="btn-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+          </svg> 
+    </button>
+<a href="#" class="page-link" target="_blank">1</a>
+<a href="#" class="page-link" target="_blank">2</a>
+<a href="#" class="page-link page-link--current" target="_blank">3</a>
+<a href="#" class="page-link" target="_blank">4</a>
+<a href="#" class="page-link" target="_blank">5</a>
+<a href="#" class="page-link" target="_blank">6</a>
+<span class="dots">....</span>
+<a href="#" class="page-link" target="_blank">23</a>
+    <button>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="btn-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+          </svg> 
+    </button>
+    </div>
+</body>
+</html>
+
+part 2:
+Sections/Layout components
+
+nav bar- navigation of links
+
+hero section- first description,img,btns
+text,img,bg-img on text, text,button combined
+description
+
+footer- sidemap,collaborators
+
+call-to-action - trail,contact,subscription
+
+feature row- description &img of product/feature
+
+Patterns/Layouts :
+
+row of boxes/cards - cards all in a row
+
+grid of boxes/cards - 2d grid all in one
+
+nesting patterns- grid/row patterns
+
+z-pattern - combo of feature rows with alternating config
+ziczag pattern of cards/boxes
+
+F-pattern- repetition of horizontal
+img on left & content on right or viceversa
+
+single column pattern- no sidebars/on mobile
+
+sidebar - for summary
+
+multi-column/magazine - clumpsy magazine layout
+
+asymmetry - creative combo patterns/mainly by grid
+
+7 steps of building the website/project:
+
+define
+
+plan
+
+sketch
+
+design and build
+
+test and optimize
+
+launch - netify platform to host, domain.name
+
+maintain and update
+
+sections:
+navigation
+hero 
+features
+how it works
+diets
+meals
+pricing
+gallery
+testimonials
+pricing
+CTA
+footer
+
+unsplash - website for images
+
+responsive web design:
+making websites best use consumable
+
+4 diff:
+fluid layouts- using %, flexboxes, maxwidth
+
+responsive units - rem
+
+flexible images- %, max-width
+
+media queries- called breakpoints(styles on viewport)
+will be return at end of code.
+
+
+max-width property - makes website consumable
+rem - root element font size
+
+105 section-intro and basic setting.
+
+trick to add border inside :
+box shadow: inset 0 0 0 3px white
+
+creating a reusable grid :
+.grid{
+display:grid;
+gap:
+grid-template-col:
+}
+
+.grid--2-cols{
+grid-template-col: repeat(2,1fr);
+}
+
+.grid--3-cols{
+grid-template-col: repeat(3,1fr)
+}

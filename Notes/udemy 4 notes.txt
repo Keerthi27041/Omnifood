@@ -1,0 +1,101 @@
+javascript intro for omnifood:
+
+variables in js:
+1.const var_name = value;
+
+
+logging of data reference:
+console.log(var_name) #prints value stored in it.
+
+const h1 = document.querySelector('.class_name');
+#selects the class selector
+
+h1.textcontent = var-name 
+#changes the content on page
+
+h1.style.backgroundColor = "red"
+h1.style.padding = "3rem"
+#changing styles
+
+
+displaying updated year:
+const class-name = dqs(".clsname");
+const currentYear = new Date().getFullYear();
+class_name.textContent= value;
+
+making mobile navigation work:
+const btnNavEl = document.queryselector('.btn-mobile-nav');
+const headerEl = document.queryselector('.header')
+btnNavEl.addEventListener('click', function(){
+headerEl.classlist.toggle("nav-open")
+
+
+implementing smooth scrolling :
+animated scrolling:
+have to implement in html.
+scroll-behaviour:smooth
+
+doesn't work on safari browser;
+problem: only browser available in apple.
+basically used as a rendering engine in iphones.
+
+
+const allLinks= document.querySelector("a:link");
+console.log(allLinks)
+//displays a list of links
+
+allLinks.forEach(function(link){
+link.addEventListener('click', function(e){
+console.log(e);
+//displays mouse events when clicked.
+e.preventDefault();
+//prevents its default behaviour.
+const href=  link.getAttribute("href");
+console.log(href);
+
+
+//Scroll back to top
+
+if(href ==="#")
+window.scrollTo{
+top:0,
+behaviour:"smooth",
+});
+
+if(href!=="#" && href.startswith("#"))
+console
+});
+});
+
+section 9 - javascript
+lecture 140 
+
+sticky navigation:
+fixing the position in viewport
+
+
+
+caniuse.com - for browers support.
+https://caniuse.com/
+
+deploying to Netlify:
+https://www.netlify.com/
+change the site name.
+for particular domain 
+and point that domain to site
+by using hover.com
+https://www.hover.com
+ or godaddy
+
+forms:
+receive form submissions
+
+updated name and upload file
+adding name attributes for form inputs.
+redeploying<deploys<folder
+
+customization of thankyou page by netlify.
+activeforms will be displayed:
+data given will be displayed.
+
+

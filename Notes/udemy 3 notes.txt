@@ -1,0 +1,177 @@
+Building works section:
+z pattern using grid of col 2
+like wise 3steps
+
+tint and shade generator:
+open color:
+color constract checker
+websites for shades
+
+before,after - cannot be used on images
+can't add childs to images
+
+z-index:
+to set one by one
+to appear top
+-1 :below the image
+
+centering technique:
+top:50%
+left:50%
+transform: translate(-50,-50);
+position:absolute
+
+to find height trick:
+width:60%
+padding-bottom:60%
+
+i.e 60% of parents width
+
+
+Building in-feature section:
+filter property in image
+filter: grayscale
+brightness
+saturate
+blur
+
+opacity:100%(completly visible)
+30%(blurred)
+faded out property
+
+Building meals section:
+cards component
+meal cards
+
+grab icons - heroicons
+https://ionic.io/ionicons/v4
+ionicons
+
+card - adding a box shadow
+overflow: hidden
+
+list-style:none(list)
+text-decoration:none(link)
+
+if added border in visited state:
+border-bottom: 1px solid color
+can also animate using'
+transition property
+
+now wanna remove it from the hover state
+here 1px border exist so layout jumps
+to fix that:
+border-bottom: none(doesn't work)
+border-bottom: 1px solid transparent(works)
+
+card hover:
+elementofcard:hover{
+transform: translate(2rem,2rem)
+[x-axis dir]
+}
+[moves in right down direction]
+transform: translateY(2rem)
+[moves in down direction]
+transform: translateY(-2rem,2rem)
+
+animation:
+use a transition property on original state
+
+
+Building testimonials section:
+figure: self content with caption
+&mdash - (-) htrml entity
+
+adding the gallery:
+if want hover effect on images
+better to add it inside a container element
+<figure> is best container for images
+
+observe the space inbetween images
+reason: image is a inline element
+make it block to resolve this
+[display:block;]
+
+creating a grid for 12 images
+and make them width of 100%
+which will make them flexible
+
+grid trick for width:
+grid-template-columns: 1fr 1fr[normal]
+grid-template-columns: 55fr 45fr[takes more than 50% width]
+
+hover effect on grid images:
+.class img:hover{
+transform:scale(1.1)
+}
+
+make sure u add transition property to 
+original state i.e to img
+.class img{
+transition: all 0.3s;
+}
+
+note: here images overflow the grid
+if inspected closely
+fix it by:
+overflow:hidden
+include it in figure element class
+
+building pricing section:
+1 rem = 16px
+
+
+features section:
+.grid: last-child{
+margin-bottom: 0;
+}
+
+or
+
+.grid:not(:last-cild){
+margin-bottom:9.6rem;
+}
+
+
+building call to action section:
+inherit: keyword 
+eg: font-family
+
+
+*:focus{
+outline:none;
+box-shadow: 0 0 0 0.8rem color;
+
+default formatting for address element is italic
+solve:
+font-style:normal;
+
+Responsinve website:
+
+Media Queries-
+
+@media(max-width:600px);
+i.e is width<= 600px ?
+
+conflicts will arise during 
+same fundamentals applied at diff widths
+
+
+selecting breakpoints:
+viewport width/pixel value in media query
+
+1. based on device width(poor)
+
+2. based on screen with ranges(better)
+  mobile - (300px - 500px)
+  tablets -(600px-900px)
+  laptops -(>1200px)
+
+3. based on design breaks down(best)
+
+
+webpage design responsive:
+meta tag - important
+
+rem and em - don't depend on html font-size
+in media queries, instead, 1rem = 1em = 16px
